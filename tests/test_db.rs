@@ -1331,3 +1331,9 @@ fn cuckoo() {
         assert!(db.get(b"k1").unwrap().is_none());
     }
 }
+
+#[test]
+fn test_set_cpu_set() {
+    let mut env = Env::new().unwrap();
+    env.set_cpu_set(&[4,2,3,5,1]);
+}
